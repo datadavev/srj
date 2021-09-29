@@ -5,6 +5,6 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    message = cow.Cowacter().milk('Hello from Python from a Serverless Function!')
+    message = cow.Cowacter().milk('Hello from Python from a simple Serverless Function!')
     return Response(f"<pre>{message}</pre>", mimetype="text/html")
 
