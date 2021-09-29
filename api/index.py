@@ -14,5 +14,5 @@ def catch_all(path):
     for row in cur.execute('SELECT * FROM stocks ORDER BY price'):
         msg.append(str(row))
     message = cow.Cowacter().milk('Hello from Python from a simple Serverless Function!')
-    return Response(f"<pre>{message}\n{'\n'.join(msg)}</pre>", mimetype="text/html")
+    return Response(f"<pre>{message}\n{'|'.join(msg)}</pre>", mimetype="text/html")
 
